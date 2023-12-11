@@ -1,4 +1,4 @@
-Shader "Custom/SimpleTextureMap"
+Shader "Custom/BlockerDissolve"
 {
     Properties
     {
