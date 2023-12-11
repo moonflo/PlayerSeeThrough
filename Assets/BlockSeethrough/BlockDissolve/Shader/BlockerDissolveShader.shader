@@ -42,14 +42,14 @@ Shader "Custom/BlockerDissolve"
             CBUFFER_START(UnityPerMaterial)
             float4 _MainTex_ST;
             float4 _DissolveTex_ST;
-            float4 _TargetSeeThrough;
+            float3 _TargetSeeThrough;
             float _TargetSeeThroughRadius;
             CBUFFER_END
 
             struct Attributes
             {
                 float4 positionOS : POSITION;
-                float3 uv : TEXCOORD0;
+                float2 uv : TEXCOORD0;
             };
 
             struct Varying

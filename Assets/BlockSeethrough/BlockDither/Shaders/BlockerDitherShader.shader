@@ -51,7 +51,7 @@ Shader "Custom/BlockerDither"
             struct Attributes
             {
                 float4 positionOS : POSITION;
-                float3 uv : TEXCOORD0;
+                float2 uv : TEXCOORD0;
             };
 
             struct Varying
@@ -66,8 +66,6 @@ Shader "Custom/BlockerDither"
                 Varying output = (Varying)0;
                 output.positionCS = TransformObjectToHClip(input.positionOS.xyz);
                 output.positionSS = ComputeScreenPos(output.positionCS);
-                // ComputeScreenPos()
-                // output.positionSS.y *= _ProjectionParams.x;
                 output.uv = input.uv;
                 return output;
             }
@@ -77,11 +75,10 @@ Shader "Custom/BlockerDither"
                 
                 #ifdef _ENABLEBLOCKDITHER_ON
                 float4x4 rawAccess = {_RowAccess1, _RowAccess2, _RowAccess3, float4(0, 0, 0, 1)};
-                float2 pixelAlignSceneSpacePos = (input.positionSS.xy / input.positionSS.w) * _ScreenParams;
-                // float2 pixelAlignSceneSpacePos = input.positionCS.xy;
-                
+                float2 pixelAlignSceneSpacePos = (input.positionSS.xy / input.positionSS.w) * _ScreenParams.xy;
                 clip(0.9 - rawAccess[floor(fmod(pixelAlignSceneSpacePos.x, 4))][floor(fmod(pixelAlignSceneSpacePos.y, 4))]);
                 #endif
+                
                 finalColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv.xy);
                 finalColor.a = 1;
                 return finalColor;
