@@ -356,7 +356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 315167974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f209354681b128e42a4965cec85735cb, type: 3}
+  m_Script: {fileID: 11500000, guid: b3942c08ce9e1c44f8bd54cdcb945a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 0
@@ -422,7 +422,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc387d19bb7614b448238c1777a75927, type: 2}
+  - {fileID: 2100000, guid: 288251cd74a64ab4fab9ce4469ba144a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -598,8 +598,6 @@ GameObject:
   - component: {fileID: 458767680}
   - component: {fileID: 458767679}
   - component: {fileID: 458767683}
-  - component: {fileID: 458767682}
-  - component: {fileID: 458767684}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -681,23 +679,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -220.828, z: 0}
---- !u!114 &458767682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458767678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 94d3c5b952534d949a6cca2680f8e8fd, type: 2}
 --- !u!114 &458767683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,27 +723,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &458767684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458767678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbb6bd1c09bb3f5418bada375a7dea14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lastHitGameObject: {fileID: 0}
-  viewCamera: {fileID: 0}
-  occlusionPoints: []
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  castDistance: 100
-  originalScale: {x: 1, y: 1, z: 1}
-  occlusionEndPoints: []
 --- !u!1 &1188553607
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +783,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc387d19bb7614b448238c1777a75927, type: 2}
+  - {fileID: 2100000, guid: 288251cd74a64ab4fab9ce4469ba144a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
